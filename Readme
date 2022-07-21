@@ -1,0 +1,14 @@
+# ReadMe
+
+## 生成代码脚手架
+```
+kubebuilder init --domain tkestack.io  --license apache2 --owner "xlhuxa"
+kubebuilder create api --group platform  --version v1 --kind Cluster --namespaced=false
+kubebuilder create api --group platform  --version v1 --kind ClusterCredential --namespaced=false
+kubebuilder create api --group platform  --version v1 --kind ConfigMap  --namespaced=false
+```
+
+## 生成crd
+```
+make generate
+make manifests

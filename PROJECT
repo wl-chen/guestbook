@@ -1,0 +1,29 @@
+domain: tkestack.io
+layout:
+- go.kubebuilder.io/v3
+projectName: guestbook
+repo: guestbook
+resources:
+- api:
+    crdVersion: v1
+  domain: tkestack.io
+  group: platform
+  kind: Cluster
+  path: guestbook/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: tkestack.io
+  group: platform
+  kind: ClusterCredential
+  path: guestbook/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+  domain: tkestack.io
+  group: platform
+  kind: ConfigMap
+  path: guestbook/api/v1
+  version: v1
+version: "3"

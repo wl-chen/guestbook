@@ -1,0 +1,36 @@
+{
+    "apiVersion": "platform.tkestack.io/v1",
+    "kind": "Cluster",
+    "metadata": {
+       "name": "cls-maenkzkm"
+    },
+    "status": {
+       "phase": "Initializing"
+    }, 
+    "spec": {
+        "clusterCIDR": "192.168.0.0/16",
+        "displayName": "ipv6-ds",
+        "tenantID": "default",
+        "type": "Baremetal",
+        "version": "1.21.4-tke.3",
+        "features": {
+           "containerRuntime": "containerd"
+        },
+        "networkDevice": "eth0",
+        "properties": {
+           "maxClusterServiceNum": 256,
+           "maxNodePodNum": 256
+        },
+        "finalizers": [
+           "cluster"
+        ],        
+        "machines": [
+            {
+                "ip": "10.0.32.15",
+                "port": 22,
+                "username": "ubuntu",
+                "privateKey": "todo"
+            }
+        ]
+    }
+}
